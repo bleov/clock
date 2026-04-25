@@ -62,10 +62,6 @@ export default function App() {
     };
   }, []);
 
-  useEffect(() => {
-    document.title = `${time.split(":").splice(0, 2).join(":")} ${time.split(" ")[1]}`;
-  }, [date]);
-
   return (
     <SettingsContext.Provider value={settingsContext}>
       <Center
