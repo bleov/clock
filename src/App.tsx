@@ -37,6 +37,10 @@ export default function App() {
   const { date, time } = useDate(settings);
   useMemo(useFavicon, []);
 
+  useEffect(() => {
+    document.title = time;
+  }, [time]);
+
   const settingsContext: SettingsContextType = {
     settings,
     setSettings,
